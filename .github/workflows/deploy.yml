@@ -1,0 +1,41 @@
+# ============================================
+# GitHub Actions 工作流 - 自动部署 MkDocs 站点
+# ============================================
+
+name: Deploy MkDocs Site  # 工作流名称
+
+# ---------- 触发条件 ----------
+on:
+  push:
+    branches:
+      - main  # 当 main 分支有代码推送时触发
+
+# ---------- 权限配置 ----------
+permissions:
+  contents: write  # 允许向 gh-pages 分支写入内容
+
+# ---------- 任务定义 ----------
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 运行环境
+
+    steps:
+      # 步骤1：检出代码
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0  # 拉取完整 Git 历史，确保版本信息正确
+
+      # 步骤2：设置 Python 环境
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'  # 使用 Python 3.12
+
+      # 步骤3：安装 MkDocs 及其依赖
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material mkdocs-awesome-pages-plugin
+
+      # 步骤4：构建并部署到 gh-pages 分支
+      - name: Build and Deploy
+        run: mkdocs gh-deploy --force

@@ -1,0 +1,37 @@
+# ============================================
+# MkDocs 配置文件 - Java 技术笔记
+# ============================================
+
+# ---------- 站点基本信息 ----------
+site_name: Java 技术笔记                                 # 站点名称，显示在浏览器标签和导航栏
+site_description: 持续沉淀 Java 生态的技术知识与最佳实践   # 站点描述，用于 SEO
+site_url: https://winnowplus.github.io/java-tech-notes  # 部署后的站点 URL，用于生成 sitemap 等
+
+# ---------- 主题配置 ----------
+theme:
+  name: material                           # 使用 Material for MkDocs 主题
+  language: zh                             # 界面语言设为中文
+  features:
+    - navigation.tabs                      # 顶部导航标签页
+    - navigation.sections                  # 侧边栏按章节分组
+    - navigation.expand                    # 侧边栏默认展开
+    - navigation.top                       # 页面右下角返回顶部按钮
+    - search.suggest                       # 搜索框显示建议
+    - search.highlight                     # 搜索结果高亮
+    - content.code.copy                    # 代码块右上角显示复制按钮
+
+# ---------- 插件配置 ----------
+plugins:
+  - search                                 # 内置搜索插件
+  - awesome-pages                          # 自动根据目录结构生成导航，无需手动配置 nav
+
+# ---------- Markdown 扩展配置 ----------
+markdown_extensions:
+  - admonition                             # 支持提示框（Note、Warning 等）
+  - pymdownx.highlight                     # 代码语法高亮
+  - pymdownx.superfences                   # 支持嵌套代码块和更多代码特性
+  - pymdownx.tabbed                        # 支持选项卡
+  - pymdownx.details                       # 支持折叠块
+  - pymdownx.inlinehilite                  # 支持行内代码高亮
+  - toc:
+      permalink: true                      # 标题旁显示锚点链接
