@@ -14,14 +14,14 @@ theme:
   language: zh                             # 界面语言设为中文
   palette:
     - scheme: default
-      primary: teal                       # 翠绿色
-      accent: red                         # 红色
+      primary: blue grey
+      accent: teal
       toggle:
         icon: material/weather-night      # 月亮图标，点击切换到暗色
         name: 切换至暗色模式
     - scheme: slate
-      primary: indigo                     # 深蓝灰色
-      accent: deep orange                 # 琥珀橙色
+      primary: indigo
+      accent: teal
       toggle:
         icon: material/weather-sunny      # 太阳图标，点击切换到亮色
         name: 切换至亮色模式
