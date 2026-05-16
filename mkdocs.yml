@@ -13,13 +13,15 @@ theme:
   name: material                           # 使用 Material for MkDocs 主题
   language: zh                             # 界面语言设为中文
   palette:
-    # 亮色模式（default），使用默认主色 indigo 和默认强调色 pink
     - scheme: default
+      primary: teal                       # 翠绿色
+      accent: red                         # 红色
       toggle:
         icon: material/weather-night      # 月亮图标，点击切换到暗色
         name: 切换至暗色模式
-    # 暗色模式（slate），使用默认主色 black 和默认强调色 indigo
     - scheme: slate
+      primary: indigo                     # 深蓝灰色
+      accent: deep orange                 # 琥珀橙色
       toggle:
         icon: material/weather-sunny      # 太阳图标，点击切换到亮色
         name: 切换至亮色模式
