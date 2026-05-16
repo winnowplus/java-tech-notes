@@ -12,6 +12,17 @@ site_author: winnowplus
 theme:
   name: material                           # 使用 Material for MkDocs 主题
   language: zh                             # 界面语言设为中文
+  palette:
+    # 亮色模式（default），使用默认主色 indigo 和默认强调色 pink
+    - scheme: default
+      toggle:
+        icon: material/weather-night      # 月亮图标，点击切换到暗色
+        name: 切换至暗色模式
+    # 暗色模式（slate），使用默认主色 black 和默认强调色 indigo
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny      # 太阳图标，点击切换到亮色
+        name: 切换至亮色模式
   features:
     - navigation.tabs                      # 顶部导航标签页
     - navigation.sections                  # 侧边栏按章节分组
@@ -31,7 +42,7 @@ markdown_extensions:
   - toc:                                   # 自动生成页面目录
       permalink: "🔗"                      # 标题旁显示锚点链接
 #     toc_depth: 2-4                       # 只显示 H2 到 H4 的标题
-# 以下扩展也有子选项，但目前我们选择默认配置🔗
+# 以下扩展也有子选项，目前使用默认配置
   - pymdownx.highlight                     # 代码语法高亮
   - pymdownx.superfences                   # 支持嵌套代码块和更多代码特性
   - pymdownx.inlinehilite                  # 支持行内代码高亮
