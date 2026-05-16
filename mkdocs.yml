@@ -29,7 +29,7 @@ plugins:
 # ---------- Markdown 扩展配置 ----------
 markdown_extensions:
   - toc:                                   # 自动生成页面目录
-      permalink: "#"                      # 标题旁显示锚点链接
+      permalink: "🔗"                      # 标题旁显示锚点链接
 #     toc_depth: 2-4                       # 只显示 H2 到 H4 的标题
 # 以下扩展也有子选项，但目前我们选择默认配置🔗
   - pymdownx.highlight                     # 代码语法高亮
@@ -47,6 +47,7 @@ markdown_extensions:
 copyright: Copyright &copy; 2026 winnowplus
 
 extra:
+  generator: false
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/winnowplus
