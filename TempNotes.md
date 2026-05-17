@@ -15,15 +15,47 @@ root/
 
 ## MkDocs 主题
 
-| 排名 | 主题名称 | 特点 | 链接（可查看效果图） |
-| :---: | :--- | :--- | :--- |
-| 1 | Material for MkDocs | 目前最流行、功能最丰富的主题。支持暗色模式、多语言、搜索建议、代码复制、Mermaid 图表等。社区活跃，插件生态完善。 | [官方文档](https://squidfunk.github.io/mkdocs-material/)（首页即演示） |
-| 2 | Read the Docs | MkDocs 内置主题之一。风格简洁、经典，适合技术文档。支持导航折叠、搜索等基础功能。 | [官方示例](https://mkdocs.readthedocs.io/en/stable/) |
-| 3 | MkDocs 默认主题 | MkDocs 内置的默认主题。极简风格，无多余装饰，适合快速搭建。 | [官方示例](https://www.mkdocs.org/) |
-| 4 | Windmill | 一个轻量、干净的第三方主题。设计风格偏向现代、扁平，适合个人博客或小型项目文档。 | [GitHub 仓库](https://github.com/gristlabs/mkdocs-windmill)（含截图） |
-| 5 | Bootswatch | 基于 Bootstrap 的主题集合。提供多种配色方案（如 Cerulean、Cosmo、Flatly 等），适合喜欢 Bootstrap 风格的用户。 | [MkDocs Bootswatch](https://mkdocs.github.io/mkdocs-bootswatch/)（含在线演示） |
-| 6 | Cinder | 一个简洁、响应式的第三方主题。风格类似 Read the Docs，但更轻量。 | [GitHub 仓库](https://github.com/chrissimpkins/cinder)（含截图） |
-| 7 | Alabaster | 一个干净、优雅的第三方主题。最初为 Sphinx 设计，后移植到 MkDocs。 | [PyPI 页面](https://pypi.org/project/mkdocs-alabaster/)（含截图） |
+[mkdocs-gallery](https://pawamoy.github.io/mkdocs-gallery/) 陈列了几乎所有主题，其中值得关注的有：
+
+|   内置主题    | 适用     | ShowCase                                                           |
+| :-----------: | :------- | :----------------------------------------------------------------- |
+|    MkDocs     | 默认     | <https://mkdocs.readthedocs.io/en/stable/user-guide/installation/> |
+| Read the Docs | API 文档 | <https://docs.readthedocs.com/platform/stable/>                    |
+
+| 第三方主题 | 适用             | ShowCase                                       |
+| :--------: | :--------------- | :--------------------------------------------- |
+|  Material  |                  | <https://squidfunk.github.io/mkdocs-material/> |
+|  Windmill  | 轻量 简洁风      | <https://gristlabs.github.io/mkdocs-windmill/> |
+| Bootswatch | Bootstrap 风格   | <https://mkdocs.github.io/mkdocs-bootswatch/>  |
+|   Cinder   | 类 Read the Docs | <https://sourcefoundry.org/cinder/>            |
+
+```yml
+# ---------- 主题配置 ----------
+theme:
+  name: material                           # 使用 Material for MkDocs 主题
+  language: zh                             # 界面语言设为中文
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-night      # 月亮图标，点击切换到暗色
+        name: 切换至暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny      # 太阳图标，点击切换到亮色
+        name: 切换至亮色模式
+  features:
+    - navigation.tabs                      # 顶部导航标签页
+    - navigation.sections                  # 侧边栏按章节分组
+    - navigation.expand                    # 侧边栏默认展开
+    - navigation.top                       # 页面右下角返回顶部按钮
+    - search.suggest                       # 搜索框显示建议
+    - search.highlight                     # 搜索结果高亮
+    - content.code.copy                    # 代码块右上角显示复制按钮
+```
 
 ## MkDocs 插件增强
 
